@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="45.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView fill="#4c4c4e" glyphName="BARS" layoutX="17.0" layoutY="25.0" size="1.5em" AnchorPane.leftAnchor="14.5" AnchorPane.rightAnchor="14.5" AnchorPane.topAnchor="15.0" />
+            <VBox layoutX="12.0" layoutY="216.0">
+               <children>
+                  <FontAwesomeIconView fill="#2b49b3" glyphName="HOME" size="1.5em" styleClass="sidebar_opt" />
+                  <FontAwesomeIconView fill="#b5a9a9" glyphName="LIST_UL" size="1.5em" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fill="#b5a9a9" glyphName="IMAGE" size="1.5em" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fill="#b5a9a9" glyphName="GEAR" size="1.5em" styleClass="sidebar_opt">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Separator>
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <FontAwesomeIconView fill="#4c4c4e" glyphName="PLUS" size="1.5em" />
+               </children>
+            </VBox>
+            <Circle fx:id="circle" fill="WHITE" layoutX="22.0" layoutY="571.0" radius="15.0" stroke="#c1c1c1" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: #f3f3f3;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="440.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="800.0" styleClass="pane" stylesheets="@../../../../java/com/example/uiproject/Stylesheet.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label text="Dashboard" textFill="#1a3384">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Calibri Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Label text="Hello there, welcome back!" textFill="#4c4c4e">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Calibri Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" text="12:20 26 October 2021" textFill="#87878a" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Calibri Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label text="My Cards" textFill="#4c4c4e">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" styleClass="plus_btn" stylesheets="@../../../../java/com/example/uiproject/Stylesheet.css" textFill="#835151">
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#c1c1c1" glyphName="PLUS" size="2em" stroke="#c1c1c1" strokeWidth="0.0" />
+                                       </graphic>
+                                    </Button>
+                                    <AnchorPane layoutX="20.0" layoutY="130.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" styleClass="colored_card">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label layoutX="20.0" layoutY="21.0" styleClass="bolder" text="VISA" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                             <font>
+                                                <Font name="Calibri" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="94.0" text="\$500.32" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="85.0">
+                                             <font>
+                                                <Font name="Calibri Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="40.0" layoutY="136.0" text="**** **** **** 1472" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="115.0">
+                                             <font>
+                                                <Font name="Calibri" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="250.0" styleClass="uncolored_card">
+                                       <children>
+                                          <Label layoutX="20.0" layoutY="21.0" styleClass="bolder" text="VISA" textFill="#3b3b40" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                             <font>
+                                                <Font name="Calibri" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="94.0" text="\$16050.32" textFill="#3b3b40" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="85.0">
+                                             <font>
+                                                <Font name="Calibri Bold" size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="40.0" layoutY="136.0" text="**** **** **** 4788" textFill="#3b3b40" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="115.0">
+                                             <font>
+                                                <Font name="Calibri" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="15.0" top="15.0" />
+                           </padding>
+                        </VBox>
+                        <Separator maxHeight="1.7976931348623157E308" minHeight="-Infinity" orientation="VERTICAL">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <VBox prefWidth="150.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                                 <children>
+                                    <Label alignment="CENTER" contentDisplay="RIGHT" text="Last Month" textFill="#1a3384">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="Calibri Bold" size="15.0" />
+                                       </font>
+                                       <graphic>
+                                          <FontAwesomeIconView fill="#1a3384" glyphName="SORT_DOWN" size="1.5em" tabSize="1" textAlignment="CENTER" />
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Label text="Income" textFill="#7f828a">
+                                 <padding>
+                                    <Insets bottom="5.0" right="10.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" styleClass="arrows">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#6fe37f" glyphName="ARROW_UP" size="1.7em" />
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Expenses" textFill="#7f828a">
+                                 <padding>
+                                    <Insets bottom="5.0" right="10.0" top="5.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="Calibri Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="40.0" prefWidth="40.0" styleClass="arrows">
+                                 <graphic>
+                                    <FontAwesomeIconView fill="#e5707a" glyphName="ARROW_DOWN" size="1.7em" />
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets left="40.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children></VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <AnchorPane layoutX="40.0" layoutY="310.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="310.0">
+               <children>
+                  <Label text="Monthly Summary" textFill="#4c4c4e" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <VBox alignment="CENTER_LEFT" layoutX="72.0" layoutY="373.0" prefHeight="200.0" prefWidth="235.0" styleClass="plus_btn" stylesheets="@../../../../java/com/example/uiproject/Stylesheet.css">
+               <children>
+                  <Label text="Income" textFill="#6fe37f">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="\$500.32" textFill="#616161">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="-10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Separator prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Label text="Expense" textFill="#e5707a">
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="\$500.32" textFill="#616161">
+                     <font>
+                        <Font name="Calibri Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="-10.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="316.0" layoutY="382.0" prefHeight="200.0" prefWidth="425.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="Generate Report" textFill="#1a3384">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <BarChart fx:id="chart" prefHeight="200.0" prefWidth="425.0" styleClass="chart-bar" stylesheets="@../../../../java/com/example/uiproject/Stylesheet.css">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+                  <Label layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" text="13:18 26 October 2021" textFill="#87878a">
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="10.0" />
+                     </padding>
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="-10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Button layoutX="825.0" layoutY="448.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="115.0" stylesheets="@../../../../java/com/example/uiproject/Stylesheet.css" text="New Transaction">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX">
+                     <color>
+                        <Color red="0.6578947305679321" green="0.6578947305679321" blue="0.6578947305679321" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button layoutX="825.0" layoutY="488.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="115.0" stylesheets="@../../../../java/com/example/uiproject/Stylesheet.css" text="Settings">
+               <font>
+                  <Font name="Calibri Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX">
+                     <color>
+                        <Color red="0.6578947305679321" green="0.6578947305679321" blue="0.6578947305679321" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
